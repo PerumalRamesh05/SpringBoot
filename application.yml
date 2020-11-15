@@ -1,4 +1,23 @@
-server:
-  port: 8181
-service:
-  message: "The message from application.yml"
+logging:
+    level: error
+    level.org.hibernate.SQL: debug
+    pattern:
+        console: '%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n'
+security:
+    oauth2:
+        client:
+            client-id: mobile
+            client-secret: pin
+        resource:
+            token-info-uri: http://localhost:9191/oauth/check_token
+spring:
+    datasource:
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+        hikari:
+            connection-timeout: 60000
+            maximum-pool-size: 5
+        password: devsystem
+        url: jdbc:oracle:thin:@localhost:1521:xe
+        username: SYS as SYSDBA
+    main:
+        banner-mode: 'off'
