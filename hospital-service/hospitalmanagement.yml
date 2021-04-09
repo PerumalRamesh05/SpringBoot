@@ -16,8 +16,8 @@ spring:
         hikari:
             connection-timeout: 60000
             maximum-pool-size: 5
-        password: devsystem
+        password: Rhino$5555
         url: jdbc:oracle:thin:@localhost:1521:xe
-        username: SYS as SYSDBA
+        username: AUTH
     main:
         banner-mode: 'off'
